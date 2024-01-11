@@ -1,6 +1,8 @@
 "use strict";
-const btn = document.querySelector("button");
+const generate = document.querySelector("button");
 const input = document.querySelector("input");
+const copyBtn = document.querySelector("img");
+const copyInput = document.querySelector("#password");
 
 let password;
 let randomChars = [];
@@ -25,7 +27,7 @@ const passMaker = function () {
   });
 };
 
-btn.addEventListener("click", () => {
+generate.addEventListener("click", () => {
   passMaker();
 
   const passwordMixer = randomChars.sort(mixer).flat();
@@ -33,4 +35,9 @@ btn.addEventListener("click", () => {
   password = passwordMixer.sort(mixer).join("");
 
   input.value = password;
+});
+
+copyBtn.addEventListener("click", () => {
+  copyInput.select();
+  document.execCommand("copy");
 });

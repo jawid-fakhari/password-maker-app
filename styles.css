@@ -30,13 +30,14 @@ body {
     height: 100%;
     border-radius: 7px;
     border: none;
-    padding: 10px;
+    padding: 20px;
     font-size: larger;
 }
 .pass-box img {
     position:absolute;
     translate: -125% 25%;
     height: 70%;
+    cursor: pointer;
 }
 .btn {
     position: relative;
